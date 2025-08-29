@@ -40,7 +40,15 @@ Darauf achten, das CA durch ihren Tailscale Domainname zu ersetzen.
 
 Wenn Sie fertig sind, sollten die Zertifikate im ~/ liegen: 
 
-sudo nano /etc/nginx/conf.d/nextcloud.conf  
+sudo nano /etc/nginx/conf.d/nextcloud.conf
+
+Nachfolgendes bitte abändern.
+
+ssl_certificate /home/Ihr-Benutzer/Tailscale-Domain.net.crt
+
+ssl_certificate_key /home/Ihr-Benutzer/Tailscale-Domain.net.key
+
+ssl_trusted_certificate /home/Ihr-Benutzer/Tailscale-Domain.net.pem 
 
 
 
